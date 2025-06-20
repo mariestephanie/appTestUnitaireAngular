@@ -1,0 +1,15 @@
+<h1 [innerHtml]="titre"></h1>
+
+<div>
+  <label>Mon prénom</label>
+  <input type="text" [(ngModel)]="prenom" />
+</div>
+<div>
+  <label>Ma couleur</label>
+  <select [(ngModel)]="laCouleur">
+    <option [ngValue]="null">Choisissez une couleur</option>
+    <option *ngFor="let couleur of lesCouleurs" [ngValue]="couleur.id">{{ couleur.libelle }}</option>
+  </select>
+</div>
+
+<h1 *ngIf="estMessageAffichable" [style.color]="laCouleur?.code">{{ message }}</h1>
