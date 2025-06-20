@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Couleur } from './models/couleur';
-import { StyleService } from './services/style.service.old';
+import { StyleService } from './services/style.service';
 
 @Component({
   selector: 'app-root',

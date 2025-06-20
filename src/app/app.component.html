@@ -6,7 +6,7 @@
 </div>
 <div>
   <label>Ma couleur</label>
-  <select [(ngModel)]="laCouleur">
+  <select  data-testid="ddCouleurs" [(ngModel)]="laCouleur">
     <option [ngValue]="null">Choisissez une couleur</option>
     <option *ngFor="let couleur of lesCouleurs" [ngValue]="couleur.id">{{ couleur.libelle }}</option>
   </select>
